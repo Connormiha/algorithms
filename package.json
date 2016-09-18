@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "description": "Just some algorithms",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Mikhail Bodrov <connormiha1@gmail.com>",
+  "engines": {
+    "node": ">=6.2.0",
+    "npm": ">=3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Connormiha/algorithms.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter nyan"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
