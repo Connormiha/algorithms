@@ -13,7 +13,7 @@
     "url": "git://github.com/Connormiha/algorithms.git"
   },
   "scripts": {
-    "test": "mocha --reporter nyan"
+    "test": "NODE_PATH=$NODE_PATH:$PWD/src mocha --reporter nyan"
   },
   "devDependencies": {
     "chai": "^3.5.0",

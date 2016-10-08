@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const smallestInteger = require('../src/greatestCommonDivisor');
+const smallestInteger = require('greatestCommonDivisor');
 
 describe('The greatest common divisor', () => {
     it('simple case', ()=> {
