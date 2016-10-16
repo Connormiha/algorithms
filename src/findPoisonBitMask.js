@@ -57,15 +57,7 @@ const findPoison = (poison) => {
 
     const usedRabbits = poison.useRabbits(rabbits);
 
-    let bitMaskResult = parseInt(usedRabbits.join(''), 2);
-
-    for (let i = 1; i <= BOTTLES_COUNT; i++) {
-        if ((bitMaskResult ^ i) === 0) {
-            return i;
-        }
-    }
-
-    return 0;
+    return parseInt(usedRabbits.join(''), 2);
 }
 
 module.exports = {
