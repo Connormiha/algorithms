@@ -5,7 +5,7 @@ const createLinkedList = require('linkedLists/create');
 const setLoopedPoint = require('linkedLists/setLoopedPoint');
 
 describe('Linked list', () => {
-    it('should setLoopedPoint', ()=> {
+    it('should setLoopedPoint', () => {
         let list = [1, 5, 6, 7, 9, 12],
             top = createLinkedList.apply(null, list);
 
