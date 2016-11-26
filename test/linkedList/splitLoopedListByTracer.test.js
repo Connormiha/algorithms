@@ -28,5 +28,6 @@ describe('Linked list', () => {
 
     it('should work splitLoopedListByTracer with not looped list', () => {
         expect(splitLoopedListByTracer(createLinkedList(1, 2, 3))).to.be.false;
+        expect(splitLoopedListByTracer(createLinkedList(1))).to.be.false;
     });
 });
