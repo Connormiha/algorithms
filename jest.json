@@ -2,7 +2,7 @@
     "transform": {
       ".+\\.js$": "babel-jest"
     },
-    "testRegex": "/__tests__/.*.js$",
+    "testRegex": "/__tests__/.*\\.(spec|test)\\.js$",
     "moduleDirectories": [
       "node_modules",
       "src"

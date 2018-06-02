@@ -1,13 +1,11 @@
-'use strict';
-
-const createLinkedList = require('linkedLists/create');
-const setLoopedPoint = require('linkedLists/setLoopedPoint');
-const checkLoopedListByRevers = require('linkedLists/checkLoopedListByRevers');
+import createLinkedList from 'linkedLists/create';
+import setLoopedPoint from 'linkedLists/setLoopedPoint';
+import checkLoopedListByRevers from 'linkedLists/checkLoopedListByRevers';
 
 describe('Linked list checkLoopedListByRevers', () => {
     it('should correct find loop', () => {
-        let list = [1, 5, 6, 7, 9, 12],
-            top = createLinkedList.apply(null, list);
+        const list = [1, 5, 6, 7, 9, 12];
+        const top = createLinkedList(...list);
 
         setLoopedPoint(top, 2);
 

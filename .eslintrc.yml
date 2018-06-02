@@ -1,0 +1,75 @@
+---
+parser: babel-eslint
+extends:
+- eslint:all
+plugins:
+- flowtype
+- jest
+overrides:
+- files:
+  - __tests__/**/*.{spec,test}.{js,jsx}
+  env:
+    jest: true
+- files:
+  - src/**/*.{js,jsx}
+  env:
+    node: false
+env:
+  browser: false
+  es6: true
+  node: true
+parserOptions:
+  sourceType: module
+rules:
+  implicit-arrow-linebreak: off
+  quotes:
+  - error
+  - single
+  space-before-function-paren:
+  - error
+  - never
+  padded-blocks:
+  - error
+  - never
+  quote-props:
+  - error
+  - as-needed
+  sort-imports: off
+  id-length: off
+  sort-keys: off
+  no-magic-numbers: off
+  function-paren-newline: off
+  no-extra-parens: off
+  default-case: off
+  no-plusplus: off
+  capitalized-comments: off
+  object-property-newline: off
+  dot-location: off
+  multiline-ternary: off
+  max-statements: off
+  no-ternary: off
+  init-declarations: off
+  valid-jsdoc: off
+  array-element-newline: off
+  no-case-declarations: off
+  array-bracket-newline: off
+  object-curly-newline: off
+  no-param-reassign: off
+  func-style: off
+  no-shadow: off
+  max-params:
+  - error
+  - 5
+  one-var:
+  - error
+  - never
+  indent:
+  - error
+  - 4
+  - SwitchCase: 1
+  comma-dangle:
+  - error
+  - always-multiline
+  max-len:
+  - error
+  - 140

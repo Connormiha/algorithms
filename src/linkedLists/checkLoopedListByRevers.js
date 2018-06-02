@@ -1,14 +1,16 @@
+// @flow
+
 /**
  * Reverse linkedList
  * @param {Cell} sentinel
  * @return {Cell} last found cell
  */
 const reversLinkedList = (sentinel) => {
-    let prevCell = null,
-        currentCell = sentinel;
+    let prevCell = null;
+    let currentCell = sentinel;
 
     while (currentCell !== null) {
-        let nextCell = currentCell.next;
+        const nextCell = currentCell.next;
 
         currentCell.next = prevCell;
 
@@ -29,10 +31,10 @@ const checkLoopedListByRevers = (firstCell) => {
         return false;
     }
 
-    let sentinel = reversLinkedList(firstCell),
-        sentinel2 = reversLinkedList(sentinel);
+    const sentinel = reversLinkedList(firstCell);
+    const sentinel2 = reversLinkedList(sentinel);
 
     return sentinel === sentinel2;
-}
+};
 
-module.exports = checkLoopedListByRevers;
+export default checkLoopedListByRevers;
