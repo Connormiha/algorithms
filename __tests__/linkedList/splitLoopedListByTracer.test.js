@@ -1,6 +1,5 @@
 'use strict';
 
-const {expect} = require('chai');
 const createLinkedList = require('linkedLists/create');
 const setLoopedPoint = require('linkedLists/setLoopedPoint');
 const splitLoopedListByTracer = require('linkedLists/splitLoopedListByTracer');
@@ -14,20 +13,20 @@ describe('Linked list', () => {
 
         const isLooped = splitLoopedListByTracer(top);
 
-        expect(isLooped).to.be.true;
+        expect(isLooped).toBe(true);
 
         let lastCell = top;
 
         for (let item of list) {
-            expect(lastCell.value).to.equal(item);
+            expect(lastCell.value).toBe(item);
             lastCell = lastCell.next;
         }
 
-        expect(lastCell).to.be.null;
+        expect(lastCell).toBe(null);
     });
 
     it('should work splitLoopedListByTracer with not looped list', () => {
-        expect(splitLoopedListByTracer(createLinkedList(1, 2, 3))).to.be.false;
-        expect(splitLoopedListByTracer(createLinkedList(1))).to.be.false;
+        expect(splitLoopedListByTracer(createLinkedList(1, 2, 3))).toBe(false);
+        expect(splitLoopedListByTracer(createLinkedList(1))).toBe(false);
     });
 });

@@ -1,6 +1,5 @@
 'use strict';
 
-const {expect} = require('chai');
 const {Poison, findPoison} = require('findPoisonBitMask');
 
 describe('findPoisonBitMask', () => {
@@ -9,8 +8,8 @@ describe('findPoisonBitMask', () => {
             const poison = new Poison(),
                 expectedPoison = findPoison(poison);
 
-            expect(poison.checkPoison(expectedPoison)).to.be.true;
-            expect(poison.checkPoison(expectedPoison + 1)).to.be.false;
+            expect(poison.checkPoison(expectedPoison)).toBe(true);
+            expect(poison.checkPoison(expectedPoison + 1)).toBe(false);
         }
     });
 });

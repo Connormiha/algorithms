@@ -1,6 +1,5 @@
 'use strict';
 
-const {expect} = require('chai');
 const createLinkedList = require('linkedLists/create');
 const setLoopedPoint = require('linkedLists/setLoopedPoint');
 
@@ -17,6 +16,6 @@ describe('Linked list', () => {
             lastCell = lastCell.next;
         }
 
-        expect(lastCell.next).to.equal(top.next.next.next);
+        expect(lastCell.next).toBe(top.next.next.next);
     });
 });

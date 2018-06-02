@@ -5,18 +5,21 @@
   "license": "MIT",
   "author": "Mikhail Bodrov <connormiha1@gmail.com>",
   "engines": {
-    "node": ">=6.2.0",
-    "npm": ">=3.3.0"
+    "node": ">=8.2.0",
+    "npm": ">=5.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/Connormiha/algorithms.git"
   },
   "scripts": {
-    "test": "NODE_PATH=$NODE_PATH:$PWD/src mocha --recursive --reporter nyan"
+    "test": "jest --config jest.json"
   },
-  "devDependencies": {
-    "chai": "3.5.0",
-    "mocha": "3.2.0"
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-flowtype": "^2.49.3",
+    "eslint-plugin-jest": "^21.17.0",
+    "flow-bin": "^0.73.0",
+    "jest-cli": "^23.1.0"
   }
 }

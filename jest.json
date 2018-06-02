@@ -1,0 +1,14 @@
+{
+    "transform": {
+      ".+\\.js$": "babel-jest"
+    },
+    "testRegex": "/__tests__/.*.js$",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "bail": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  }

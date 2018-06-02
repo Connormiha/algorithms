@@ -1,6 +1,5 @@
 'use strict';
 
-const {expect} = require('chai');
 const createLinkedList = require('linkedLists/create');
 const setLoopedPoint = require('linkedLists/setLoopedPoint');
 const checkLoopedListByRevers = require('linkedLists/checkLoopedListByRevers');
@@ -14,11 +13,11 @@ describe('Linked list checkLoopedListByRevers', () => {
 
         const isLooped = checkLoopedListByRevers(top);
 
-        expect(isLooped).to.be.true;
+        expect(isLooped).toBe(true);
     });
 
     it('shouldn\'t find loop', () => {
-        expect(checkLoopedListByRevers(createLinkedList(1, 2, 3))).to.be.false;
-        expect(checkLoopedListByRevers(createLinkedList(1))).to.be.false;
+        expect(checkLoopedListByRevers(createLinkedList(1, 2, 3))).toBe(false);
+        expect(checkLoopedListByRevers(createLinkedList(1))).toBe(false);
     });
 });
